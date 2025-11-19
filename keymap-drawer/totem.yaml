@@ -253,7 +253,7 @@ layers:
   '6':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

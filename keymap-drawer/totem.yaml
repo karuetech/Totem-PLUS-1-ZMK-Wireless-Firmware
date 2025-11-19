@@ -1,7 +1,6 @@
-layout: {dts_layout: totem.dtsi}
-
+layout: {zmk_keyboard: totem (1)}
 layers:
-  Default:
+  Base:
   - Q
   - W
   - E
@@ -12,17 +11,20 @@ layers:
   - I
   - O
   - P
+  - Game
+  - ESCAPE
   - {t: A, h: LEFT WIN}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LEFT CONTROL}
   - {t: F, h: LEFT SHIFT}
   - G
   - H
   - {t: J, h: RIGHT SHIFT}
-  - {t: K, h: RCTRL}
+  - {t: K, h: RIGHT CONTROL}
   - {t: L, h: RIGHT ALT}
-  - {t: ;, h: RCTRL}
-  - {t: ESC, h: Fun}
+  - ;
+  - ''''
+  - Fun
   - Z
   - X
   - C
@@ -33,48 +35,48 @@ layers:
   - ','
   - .
   - /
-  - {t: '''', h: '"'}
-  - {t: DEL, h: LCTRL}
-  - {t: TAB, h: Nav}
+  - \
+  - BACKSPACE
+  - {t: TAB, h: NumSym}
   - SPACE
-  - RET
-  - {t: BACK SPACE, h: Sym}
+  - ENTER
+  - {t: BACKSPACE, h: Sym}
   - '-'
-  - '-'
-  - '-'
-  - '-' 
-  Nav:
-  - {t: ▽, type: trans}
-  - Sft+Gui+ 3
+  NumSym:
+  - Gui+1
+  - Gui+2
   - UP ARROW
-  - {t: ▽, type: trans}
+  - Gui+4
   - '{'
-  - '}'
+  - Gui+}
   - '7'
   - '8'
   - '9'
-  - +
+  - '-'
   - {t: ▽, type: trans}
+  - '='
+  - {t: '9', h: LSHFT}
   - LEFT
-  - DOWN ARROW
+  - DOWN
   - RIGHT
   - (
   - )
   - '4'
   - '5'
   - '6'
-  - '-'
+  - {t: '8', h: RSHFT}
+  - '`'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - PAGE UP
-  - {t: ▽, type: trans}
-  - PAGE DOWN
+  - F9
+  - F7
+  - F10
+  - '5'
   - '['
   - ']'
   - '1'
   - '2'
   - '3'
-  - {t: '*', h: toggle}
+  - F8
   - \
   - {t: ▽, type: trans}
   - {type: held}
@@ -82,9 +84,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   Sym:
   - '!'
   - '@'
@@ -97,71 +96,155 @@ layers:
   - (
   - '='
   - {t: ▽, type: trans}
+  - ESCAPE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '*'
-  - '~'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - .
+  - CAPS
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
   - +
+  - '['
+  - {t: ▽, type: trans}
+  - DEL
+  - {t: ▽, type: trans}
+  - PG DN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - <
+  - '>'
+  - Ctl+F
+  - ']'
+  - {t: ▽, type: trans}
+  - {t: _, s: '-'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  Game:
+  - '5'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: Default, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Func:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F23
-  - F24
-  - MUTE
-  - PP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BT CLR ALL
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - OUT BLE
-  - OUT USB
-  - VOL DN
-  - VOL UP
-  - PREV
-  - NEXT
+  - Z
+  - '6'
+  - Q
+  - W
+  - E
+  - R
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT CONTROL
+  - X
+  - A
+  - S
+  - D
+  - F
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: G, h: TAB}
+  - LEFT SHIFT
+  - SPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Base, h: toggle}
+  Gameplus:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - O
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ESC
+  - N
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - M
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&game_type'
+  - TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - K
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ESCAPE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  '6':
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&accs U'
+  - '&accd U'
+  - '&acce U'
+  - '&acce O'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '&accs A', h: LSHIFT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&accs E'
+  - '&accs I'
+  - {t: '&accd O', h: LEFT SHIFT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&accs O'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -184,7 +267,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: Gaming, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Game, h: toggle}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -208,101 +294,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Gaming:
-  - '5'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - TAB
-  - X
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '6'
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT CONTROL
-  - Z
-  - A
-  - S
-  - D
-  - F
-  - N
-  - M
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - G
-  - LEFT SHIFT
-  - SPACE
-  - ENTER
-  - ESC
-  - ESC
-  - ESC
-  - ESC
-  - {t: Default, h: toggle}
-  '6':
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
 combos:
-- p: [16, 17]
-  k: BACK SPACE
-- p: [16, 17, 18]
-  k: PRINT SCREEN
-- p: [13, 12]
-  k: {t: LEFT SHIFT, h: sticky}
-- p: [32, 37]
-  k: {t: Sym, h: toggle}
-- p: [1, 0]
-  k: ESCAPE
+- p: [12, 21]
+  k: '&caps_word'
+  l: [Base]
+- p: [18, 19]
+  k: BACKSPACE
+- p: [15, 14, 13]
+  k: Ctl+Alt+DEL
+- p: [18, 19, 20]
+  k: Gui+Sft+S

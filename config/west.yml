@@ -16,6 +16,8 @@ manifest:
       url-base: https://github.com/englmaxi
     - name: gpeye
       url-base: https://github.com/GPeye
+    - name: bwshockley
+      url-base: https://github.com/bwshockley
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -39,5 +41,8 @@ manifest:
     - name: mario-peripheral-animation
       remote: gpeye
       revision: main 
+    - name: zmk-dongle-screen-2
+      remote: karuetech
+      revision: main
   self:
     path: config

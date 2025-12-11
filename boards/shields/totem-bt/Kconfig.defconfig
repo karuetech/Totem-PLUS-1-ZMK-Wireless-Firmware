@@ -1,10 +1,6 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config LV_DISP_DEF_REFR_PERIOD
-    int "LVGL default refresh period"
-    default 30
-
 if SHIELD_TOTEM_LEFT
 
 config ZMK_KEYBOARD_NAME
